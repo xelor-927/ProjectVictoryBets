@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Journée Portes Ouvertes</title>
+    <link rel="stylesheet" href="formulaire.css">
+    <script src="formulaire.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="parissportif.html">
+            <img src="victorybets.png" alt="ballon de foot" width="200px">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="parissportif.html">Accueil</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="Parisencours.html">Paris en cours</a></li>
+                <li><a href="moncompte.html">Mon Compte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="message-error">
+        <ul></ul>
+    </div>
+    <div class="message-success">
+        Formulaire envoyé !
+    </div>
+
+    <form id="inscriptionForm" action="" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" required>
+        </div>
+
+        <div>
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom" required>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div>
+            <label>Classe actuelle</label>
+            <input type="radio" name="classe" id="classe1" value="1ere" required>
+            <label for="classe1">Modéré</label>
+            <input type="radio" name="classe" id="classeTle" value="Tle" required>
+            <label for="classeTle">Compulsif</label>
+        </div>
+
+        <div>
+            <label for="axePrefere">Axe préféré</label>
+            <select name="axePrefere" id="axePrefere" required>
+                <option value="" disabled selected>Choisissez un axe préféré</option>
+                <option value="Parieur fou">Football, Basketball, golf,Handball</option>
+                <option value="Parieur confirmé">Basketball, rugby</option>
+                <option value="Parieur débutant">Tennis,</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="validateForm()">S'inscrire</button>
+    </form>
+</body>
+
+</html>
